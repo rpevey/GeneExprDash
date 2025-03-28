@@ -32,12 +32,6 @@ viridis_colors = sample_colorscale("Viridis", [0.75, 0.25])
 app.layout = html.Div([
   html.H2("Gene Expression Dashboard", style={"textAlign": "center"}),
   dcc.Checklist(
-    id="volcano-toggle",
-    options=[{"label": " Show volcano plot", "value": "show"}],
-    value=[],
-    style={"margin": "10px 0"}
-),
-  dcc.Checklist(
     id='sig-only-toggle',
     options=[{'label': ' Show only significant genes (FDR < 0.05)', 'value': 'sig'}],
     value=[],  # empty = show all by default
