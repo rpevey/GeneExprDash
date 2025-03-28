@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 from plotly.colors import sample_colorscale
 
 # Load the merged data
-df = pd.read_csv("../results/dash_expression_data.csv", na_values=["NA", "NaN", ""])
+df = pd.read_csv("dash_expression_data.csv", na_values=["NA", "NaN", ""])
 
 # Clean for safety
 df['gene'] = df['gene'].astype(str)
