@@ -53,7 +53,7 @@ app.layout = html.Div([
   html.Div(id="de-info-text", style={"margin": "10px", "textAlign": "center", "fontSize": "14px"}),
   dash.dash_table.DataTable(
     id='expression-table',
-    style_table={'overflowX': 'auto', 'margin': '20px auto', 'width': '40%'},
+    style_table={'overflowX': 'auto', 'margin': '20px auto', 'width': '60%'},
     style_cell={'textAlign': 'left',
                 'padding': '5px',
                 'fontFamily': 'sans-serif',
