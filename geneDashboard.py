@@ -30,12 +30,6 @@ default_gene = df.loc[df['log2FoldChange'].abs().idxmax(), 'gene']
 viridis_colors = sample_colorscale("Viridis", [0.75, 0.25])
 
 app.layout = html.Div([
-  dcc.Checklist(
-    id='sig-only-toggle',
-    options=[{'label': ' Show only significant genes (FDR < 0.05)', 'value': 'sig'}],
-    value=[],  # empty = show all by default
-    style={"margin": "10px"}
-),
   dcc.Dropdown(
     id="gene-dropdown",
     options=[{"label": g, "value": g} for g in sorted(df["gene"].dropna().unique())],
@@ -48,6 +42,12 @@ app.layout = html.Div([
            style={"width": "80%",
                   "margin": "0 auto"}
            ),
+  dcc.Checklist(
+    id='sig-only-toggle',
+    options=[{'label': ' Show only significant genes (FDR < 0.05)', 'value': 'sig'}],
+    value=[],  # empty = show all by default
+    style={"margin": "10px"}
+),
   html.Button("Download graph data (CSV)", id="download-btn", n_clicks=0, style={"margin": "20px"}),
   dcc.Download(id="download-data"),
   html.Div(id="de-info-text", style={"margin": "10px", "textAlign": "center", "fontSize": "14px"}),
