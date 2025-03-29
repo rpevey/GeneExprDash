@@ -270,7 +270,7 @@ def update_de_info(selected_gene):
         lfc_val = gene_data["log2FoldChange"].iloc[0]
 
         if pd.notnull(fdr_val) and pd.notnull(lfc_val):
-            return f"log₂FC: {lfc_val:.3f} | FDR (q-value): {fdr_val:.2e}"
+            return f"log₂FC: {lfc_val:.3f} | FDR: {fdr_val:.2e}"
         else:
             return "No differential expression data available for this gene."
     else:
