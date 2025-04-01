@@ -39,7 +39,7 @@ app.layout = html.Div([
     style={"width": "200px"}
   ),
   dcc.Graph(id="expression-plot",
-           style={"width": "80%",
+           style={"width": "100%",
                   "margin": "0 auto"}
            ),
   dcc.Checklist(
